@@ -44,7 +44,7 @@ def scrape_and_save_shayari():
                     
                     
     
-    with open('gazal-sher.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('../gazal-sher.csv', 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['sher'])
         

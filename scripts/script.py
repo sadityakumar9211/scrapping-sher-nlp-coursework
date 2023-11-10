@@ -29,7 +29,7 @@ def scrape_and_save_shayari():
                         sher_data[sher_text].append(tag)
 
     # Create the original CSV file with unique sher
-    with open('shayari.csv', 'w', newline='', encoding='utf-8') as csvfile:
+    with open('../shayari.csv', 'w', newline='', encoding='utf-8') as csvfile:
         writer = csv.writer(csvfile)
         writer.writerow(['sher', 'tags'])
 
@@ -38,7 +38,7 @@ def scrape_and_save_shayari():
                 writer.writerow([sher, ', '.join(tag_list)])
 
     # Create a separate CSV file for duplicate shers
-    with open('duplicate_shayari.csv', 'w', newline='', encoding='utf-8') as duplicate_csvfile:
+    with open('../duplicate_shayari.csv', 'w', newline='', encoding='utf-8') as duplicate_csvfile:
         duplicate_writer = csv.writer(duplicate_csvfile)
         duplicate_writer.writerow(['sher', 'tags'])
 
