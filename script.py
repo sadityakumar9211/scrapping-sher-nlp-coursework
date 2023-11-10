@@ -21,12 +21,12 @@ def scrape_and_save_shayari():
                 if len(sher_lines) >= 2:
                     line1 = ' '.join([span.text for span in sher_lines[0].find_all('span')]).strip()
                     line2 = ' '.join([span.text for span in sher_lines[1].find_all('span')]).strip()
-                    shayari_text = f"{line1} | {line2}"
+                    sher_text = f"{line1} | {line2}"
 
-                    if shayari_text not in sher_data:
-                        sher_data[shayari_text] = [tag]
+                    if sher_text not in sher_data:
+                        sher_data[sher_text] = [tag]
                     else:
-                        sher_data[shayari_text].append(tag)
+                        sher_data[sher_text].append(tag)
 
     # Create the original CSV file with unique sher
     with open('shayari.csv', 'w', newline='', encoding='utf-8') as csvfile:

@@ -11,3 +11,11 @@ genericUrl = "https://www.rekhta.org/tags/{tag}-shayari/couplets?lang=hi"
 - csv
 - requests
 
+
+### Scrapping the Gazals:-
+
+
+genericUrl = "https://www.rekhta.org/shayari/100-famous-ghazals/?lang=hi"
+
+
+
